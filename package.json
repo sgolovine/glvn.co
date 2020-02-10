@@ -1,9 +1,18 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "glvn.co",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "My personal website",
+  "version": "1.0.0",
+  "author": "Sunny Golovine <sunny@glvn.co>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
+    "start": "gatsby clean && npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
   "dependencies": {
     "bootstrap": "^4.4.1",
     "bootswatch": "^4.4.1",
@@ -30,25 +39,5 @@
     "@types/styled-components": "^4.4.2",
     "prettier": "^1.19.1",
     "typescript": "^3.7.5"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
