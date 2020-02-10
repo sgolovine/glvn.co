@@ -1,42 +1,88 @@
+import React, { useState, useEffect } from "react"
+import { Navbar, Nav } from "react-bootstrap"
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import styled from "styled-components"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const links = [
+  {
+    name: "About",
+    path: "/about",
+  },
+  {
+    name: "Projects",
+    path: "/projects",
+  },
+  {
+    name: "Contact",
+    path: "/contact",
+  },
+]
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+const NavItem = ({ path, name }) => {
+  const active = window.location.pathname === path
+
+  return (
+    <NavLink active={active} as={Link} to={path}>
+      {name}
+    </NavLink>
+  )
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
+const Header = () => {
+  return (
+    <div>
+      <Navbar collapseOnSelect expand="lg">
+        <NavBrand as={Link} to="/">
+          Sunny Golovine
+        </NavBrand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse
+          fg="dark"
+          id="responsive-navbar-nav"
+          className="justify-content-end"
+        >
+          <Nav>
+            {links.map((link, index) => {
+              return <NavItem key={index} path={link.path} name={link.name} />
+            })}
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </div>
+  )
 }
 
 export default Header
+
+const NavBrand = styled(Navbar.Brand)`
+  color: #fff;
+  font-size: 22px;
+  text-transform: uppercase;
+`
+
+const NavLink = styled(Nav.Link)`
+  font-size: 18px;
+  border: 3px solid;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  border-color: ${props => (props.active ? "white" : "transparent")};
+  width: 120px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  :hover {
+    text-decoration: none;
+    border-color: white;
+    color: white;
+  }
+  @media (max-width: 1000px) {
+    border: unset;
+    border-radius: unset;
+    text-align: unset;
+  }
+`
