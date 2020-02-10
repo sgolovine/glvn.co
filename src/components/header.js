@@ -2,6 +2,7 @@ import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import HeaderImage from './HeaderImage'
 
 const links = [
   {
@@ -32,9 +33,7 @@ const Header = () => {
   return (
     <div>
       <Navbar collapseOnSelect expand="lg">
-        <NavBrand as={Link} to="/">
-          Sunny Golovine
-        </NavBrand>
+        <HeaderImage style={{ alignSelf: 'center' }} />
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse
           fg="dark"
@@ -53,12 +52,6 @@ const Header = () => {
 }
 
 export default Header
-
-const NavBrand = styled(Navbar.Brand)`
-  color: #fff;
-  font-size: 22px;
-  text-transform: uppercase;
-`
 
 const NavLink = styled(Nav.Link)`
   font-size: 18px;
