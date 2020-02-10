@@ -21,22 +21,18 @@ const links = [
 
 const NavItem = ({ path, name }: { path: string; name: string }) => {
   const active = window.location.pathname === path
+  const Component = active ? ActiveNavLink : NavLink
 
-  return (
-    <NavLink active={active} as={Link} to={path}>
-      {name}
-    </NavLink>
-  )
+  return <Component to={path}>{name}</Component>
 }
 
 const Header = () => {
   return (
     <div>
       <Navbar collapseOnSelect expand="lg">
-        <HeaderImage style={{ alignSelf: 'center' }} />
+        <HeaderImage />
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse
-          fg="dark"
           id="responsive-navbar-nav"
           className="justify-content-end"
         >
@@ -53,14 +49,14 @@ const Header = () => {
 
 export default Header
 
-const NavLink = styled(Nav.Link)`
+const NavLink = styled(Link)`
   font-size: 18px;
   border-bottom: 3px solid;
   padding-top: 5px;
   padding-bottom: 5px;
   margin: 15px;
   text-decoration: none;
-  border-bottom-color: ${(props) => (props.active ? 'white' : 'transparent')};
+  border-bottom-color: transparent;
   width: 120px;
   text-align: center;
   text-transform: uppercase;
@@ -75,4 +71,8 @@ const NavLink = styled(Nav.Link)`
     border-radius: unset;
     text-align: unset;
   }
+`
+
+const ActiveNavLink = styled(NavLink)`
+  border-bottom-color: 'white';
 `
