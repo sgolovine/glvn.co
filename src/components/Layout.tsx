@@ -1,8 +1,8 @@
-import React from "react"
-import Header from "./Header"
-import styled from "styled-components"
+import React, { ReactNode } from 'react'
+import Header from './Header'
+import styled from 'styled-components'
 
-export default ({ children }) => {
+export default ({ children }: { children: ReactNode }) => {
   return (
     <SiteContainer>
       <Header />

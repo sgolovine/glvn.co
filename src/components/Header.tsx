@@ -19,7 +19,7 @@ const links = [
   },
 ]
 
-const NavItem = ({ path, name }) => {
+const NavItem = ({ path, name }: { path: string; name: string }) => {
   const active = window.location.pathname === path
 
   return (
