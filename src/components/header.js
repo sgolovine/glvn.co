@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from "react"
-import { Navbar, Nav } from "react-bootstrap"
-import { Link } from "gatsby"
-import styled from "styled-components"
+import React from 'react'
+import { Navbar, Nav } from 'react-bootstrap'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
 
 const links = [
   {
-    name: "About",
-    path: "/about",
+    name: 'About',
+    path: '/about',
   },
   {
-    name: "Projects",
-    path: "/projects",
+    name: 'Projects',
+    path: '/projects',
   },
   {
-    name: "Contact",
-    path: "/contact",
+    name: 'Contact',
+    path: '/contact',
   },
 ]
 
@@ -62,22 +62,19 @@ const NavBrand = styled(Navbar.Brand)`
 
 const NavLink = styled(Nav.Link)`
   font-size: 18px;
-  border: 3px solid;
-  padding-left: 15px;
-  padding-right: 15px;
+  border-bottom: 3px solid;
   padding-top: 5px;
   padding-bottom: 5px;
   margin: 15px;
-  border-radius: 10px;
   text-decoration: none;
-  border-color: ${props => (props.active ? "white" : "transparent")};
+  border-bottom-color: ${(props) => (props.active ? 'white' : 'transparent')};
   width: 120px;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
   :hover {
     text-decoration: none;
-    border-color: white;
+    border-bottom-color: white;
     color: white;
   }
   @media (max-width: 1000px) {
