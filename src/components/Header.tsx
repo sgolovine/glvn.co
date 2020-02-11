@@ -62,11 +62,11 @@ const NavLink = styled(Link)`
   width: 120px;
   text-align: center;
   text-transform: uppercase;
-  color: #fff;
+  color: ${(props) => props.theme.text};
   :hover {
     text-decoration: none;
-    border-bottom-color: white;
-    color: white;
+    border-bottom-color: ${(props) => props.theme.text};
+    color: ${(props) => props.theme.text};
   }
   @media (max-width: 1000px) {
     border: unset;
@@ -76,5 +76,5 @@ const NavLink = styled(Link)`
 `
 
 const ActiveNavLink = styled(NavLink)`
-  border-bottom-color: 'white';
+  border-bottom-color: ${(props) => props.theme.text};
 `
