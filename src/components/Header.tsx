@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import HeaderImage from './HeaderImage'
-import { WiMoonAltFirstQuarter, WiMoonAltThirdQuarter } from 'react-icons/wi'
+import { ThemeSelector } from './ThemeSelector'
 
 const links = [
   {
@@ -28,7 +28,6 @@ const NavItem = ({ path, name }: { path: string; name: string }) => {
 }
 
 const Header = () => {
-  const [dark, setDark] = useState(false)
   return (
     <div>
       <Navbar collapseOnSelect expand="lg">
@@ -43,13 +42,7 @@ const Header = () => {
               return <NavItem key={index} path={link.path} name={link.name} />
             })}
           </Nav>
-          <ThemeButton onClick={() => setDark(!dark)}>
-            {dark ? (
-              <WiMoonAltFirstQuarter size={32} color="#fff" />
-            ) : (
-              <WiMoonAltThirdQuarter size={32} color="#fff" />
-            )}
-          </ThemeButton>
+          <ThemeSelector />
         </Navbar.Collapse>
       </Navbar>
     </div>
@@ -84,9 +77,4 @@ const NavLink = styled(Link)`
 
 const ActiveNavLink = styled(NavLink)`
   border-bottom-color: 'white';
-`
-
-const ThemeButton = styled.button`
-  background-color: transparent;
-  border: transparent;
 `
