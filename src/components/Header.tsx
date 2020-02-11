@@ -3,6 +3,7 @@ import { Navbar, Nav } from 'react-bootstrap'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import HeaderImage from './HeaderImage'
+import { WiMoonAltFirstQuarter } from 'react-icons/wi'
 
 const links = [
   {
@@ -41,6 +42,9 @@ const Header = () => {
               return <NavItem key={index} path={link.path} name={link.name} />
             })}
           </Nav>
+          <ThemeButton onClick={() => alert('pressed')}>
+            <WiMoonAltFirstQuarter size={32} color="#fff" />
+          </ThemeButton>
         </Navbar.Collapse>
       </Navbar>
     </div>
@@ -75,4 +79,9 @@ const NavLink = styled(Link)`
 
 const ActiveNavLink = styled(NavLink)`
   border-bottom-color: 'white';
+`
+
+const ThemeButton = styled.button`
+  background-color: transparent;
+  border: transparent;
 `

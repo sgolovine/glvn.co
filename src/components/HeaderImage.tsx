@@ -7,7 +7,7 @@ export default () => {
     query {
       icon: file(relativePath: { eq: "profile.png" }) {
         childImageSharp {
-          fixed(width: 64) {
+          fixed(width: 48) {
             ...GatsbyImageSharpFixed
           }
         }
