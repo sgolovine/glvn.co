@@ -1,3 +1,5 @@
+import { createStore } from 'redux'
+
 // Types
 type AppAction = {
   type: string
@@ -27,7 +29,7 @@ const initialState: State = {
 }
 
 // Reducer
-export function reducer(state: State = initialState, action: AppAction): State {
+function reducer(state: State = initialState, action: AppAction): State {
   switch (action.type) {
     case SET_THEME: {
       return {
@@ -42,3 +44,13 @@ export function reducer(state: State = initialState, action: AppAction): State {
 
 // Selectors
 export const getTheme = (state: State) => state.theme
+
+// Create Store
+export const store = createStore(
+  reducer,
+  initialState,
+  // Redux Devtools Extension
+  typeof window !== undefined &&
+    (window as any).__REDUX_DEVTOOLS_EXTENSION__ &&
+    (window as any).__REDUX_DEVTOOLS_EXTENSION__()
+)
