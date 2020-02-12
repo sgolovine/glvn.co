@@ -7,10 +7,6 @@ import { ThemeSelector } from './ThemeSelector'
 
 const links = [
   {
-    name: 'About',
-    path: '/about',
-  },
-  {
     name: 'Projects',
     path: '/projects',
   },
