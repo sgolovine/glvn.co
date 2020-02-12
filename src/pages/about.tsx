@@ -1,10 +1,6 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import Text from '../components/Text'
 
 export default () => {
-  return (
-    <Layout>
-      <p>Hello World /about</p>
-    </Layout>
-  )
+  return <Text>Hello World /about</Text>
 }

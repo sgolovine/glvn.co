@@ -1,9 +1,6 @@
-import React from "react"
-import Layout from "../components/Layout"
+import React from 'react'
+import Text from '../components/Text'
+
 export default () => {
-  return (
-    <Layout>
-      <p>Hello World /contact</p>
-    </Layout>
-  )
+  return <Text>Hello World /contact</Text>
 }

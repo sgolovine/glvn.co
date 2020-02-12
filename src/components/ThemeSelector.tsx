@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { WiMoonAltFirstQuarter, WiMoonAltThirdQuarter } from 'react-icons/wi'
+import { WiMoonAltFirstQuarter } from 'react-icons/wi'
 import colors from '../styles/colors'
 import { useSelector, useDispatch } from 'react-redux'
 import { getTheme, setTheme } from '../store'
@@ -19,15 +19,11 @@ export const ThemeSelector = () => {
     }
   }
 
-  const IconComponent = isDarkTheme
-    ? WiMoonAltThirdQuarter
-    : WiMoonAltFirstQuarter
-
   const iconColor = isDarkTheme ? colors.text.dark : colors.text.light
 
   return (
     <ThemeButton onClick={handleThemeChange}>
-      <IconComponent size={32} color={iconColor} />
+      <WiMoonAltFirstQuarter size={32} color={iconColor} />
     </ThemeButton>
   )
 }

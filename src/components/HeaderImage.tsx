@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 
 export default () => {
@@ -15,5 +15,9 @@ export default () => {
     }
   `)
 
-  return <Img fixed={data.icon.childImageSharp.fixed} alt="header-image" />
+  return (
+    <Link to="/">
+      <Img fixed={data.icon.childImageSharp.fixed} alt="header-image" />
+    </Link>
+  )
 }
