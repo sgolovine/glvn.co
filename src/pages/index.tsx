@@ -13,7 +13,7 @@ import { Link } from 'gatsby'
 
 export default () => {
   return (
-    <TextContainer>
+    <PageContainer>
       <StyledText>
         I'm a Full Stack developer from{' '}
         <StyledExternalLink href="#">Yekaterinburg, Russia</StyledExternalLink>{' '}
@@ -35,7 +35,7 @@ export default () => {
         <StyledLink to="/projects">projects</StyledLink>, or{' '}
         <StyledLink to="/contact">get in touch</StyledLink>
       </StyledText>
-    </TextContainer>
+    </PageContainer>
   )
 }
 
@@ -47,7 +47,7 @@ const StyledExternalLink = styled.a``
 
 const StyledLink = styled(Link)``
 
-const TextContainer = styled.div`
+const PageContainer = styled.div`
   padding: 1.5em;
   max-width: 1200px;
 `

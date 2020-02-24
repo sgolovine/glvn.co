@@ -1,22 +1,30 @@
 import React from 'react'
-import { Card, CardImg } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
+import styled from 'styled-components'
 
 type Props = {
-  projectName: string
-  projectDescriotion: string
-  githubUrl: string
-  webUrl: string
-  imgUrl?: string
+  name: string
+  desc: string
+  githubUrl?: string
+  webUrl?: string
 }
 
-const ProjectCard = (props: Props) => {
+export const ProjectCard = (props: Props) => {
   return (
-    <Card>
-      {props.imgUrl && <Card.Img variant="top" src={props.imgUrl} />}
+    <MarginCard>
       <Card.Body>
-        <Card.Title>{props.projectName}</Card.Title>
-        <Card.Text>{props.projectDescriotion}</Card.Text>
+        <Card.Title>{props.name}</Card.Title>
+        <Card.Text>{props.desc}</Card.Text>
+        {props.githubUrl && (
+          <Card.Link href={props.githubUrl}>Source Code</Card.Link>
+        )}
+        {props.webUrl && <Card.Link href={props.webUrl}>Website</Card.Link>}
       </Card.Body>
-    </Card>
+    </MarginCard>
   )
 }
+
+const MarginCard = styled(Card)`
+  margin-top: 5px;
+  margin-bottom: 5px;
+`
