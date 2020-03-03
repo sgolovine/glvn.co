@@ -7,4 +7,8 @@ export default {
     light: '#333',
     dark: '#fff',
   },
+  border: {
+    light: '#dfdfdf',
+    dark: '#616161',
+  },
 }
