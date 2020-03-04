@@ -2,7 +2,7 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { store } from './src/store'
 import { ThemeWrapper } from './src/ThemeWrapper'
-import SiteLayout from './src/components/SiteLayout'
+import { SiteLayout } from './src/components/SiteLayout'
 import { MetaHelmet } from './src/components/MetaHelmet'
 // CSS Imports
 import 'bootstrap/dist/css/bootstrap.min.css'
