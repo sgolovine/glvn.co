@@ -17,9 +17,22 @@ export default () => {
           />
         )
       })}
+      <MoreLinkContainer>
+        <SeeMoreLink href="https://github.com/sgolovine">
+          See More on my Github Page...
+        </SeeMoreLink>
+      </MoreLinkContainer>
     </ProjectContainer>
   )
 }
+
+const MoreLinkContainer = styled.div`
+  margin: 1.5em;
+`
+
+const SeeMoreLink = styled.a`
+  font-size: 22px;
+`
 
 const ProjectContainer = styled.div`
   max-width: 600px;
