@@ -7,10 +7,6 @@
   My Personal Website
 </h1>
 
-
-*Intentionally Overengineered*
-
-
 ## Installation
 
 Make sure you have NodeJS and yarn installed via NPM. Run `yarn` in the project directory to install dependencies
@@ -24,3 +20,11 @@ Run `yarn start` to start the site in development mode
 ## Building for Production
 
 Run `yarn build` to build the site for production. The output will be in the `public/` folder
+
+## Modifying Data
+
+**Adding a project** - To add a project add a value to `src/data/projects.ts`
+
+**Updating Contact Info** - To update contact info add/change values in `src/data/links.ts`
+
+
