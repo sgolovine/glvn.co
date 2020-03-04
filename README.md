@@ -27,4 +27,9 @@ Run `yarn build` to build the site for production. The output will be in the `pu
 
 **Updating Contact Info** - To update contact info add/change values in `src/data/links.ts`
 
+## CI
 
+The site uses Github Actions to perform basic checks to the code before pushing to production. The command `yarn ci` is used in Github actions and does two things:
+  
+  * Typecheck - `yarn tsc` - checks typescript types
+  * Format - `yarn format` - runs prettier on the codebase 
