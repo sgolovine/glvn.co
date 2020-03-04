@@ -2,8 +2,8 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { store } from './src/store'
 import { ThemeWrapper } from './src/ThemeWrapper'
-import Layout from './src/components/Layout'
-import Helmet from './src/components/Helmet'
+import SiteLayout from './src/components/SiteLayout'
+import { MetaHelmet } from './src/components/MetaHelmet'
 // CSS Imports
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './src/styles/bootstrap-overrides.css'
@@ -11,7 +11,7 @@ import './src/styles/bootstrap-overrides.css'
 export const wrapRootElement = ({ element }) => {
   return (
     <div>
-      <Helmet />
+      <MetaHelmet />
       <Provider store={store}>
         <ThemeWrapper>{element}</ThemeWrapper>
       </Provider>
@@ -20,5 +20,5 @@ export const wrapRootElement = ({ element }) => {
 }
 
 export const wrapPageElement = ({ element }) => {
-  return <Layout>{element}</Layout>
+  return <SiteLayout>{element}</SiteLayout>
 }

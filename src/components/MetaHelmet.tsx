@@ -8,7 +8,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-export default () => (
+export const MetaHelmet = () => (
   <Helmet>
     <meta name="description" content="Website for Sunny Golovine" />
     <meta

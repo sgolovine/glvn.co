@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import HeaderImage from './HeaderImage'
+import { HeaderImage } from './HeaderImage'
 import { ThemeSelector } from './ThemeSelector'
 
 const links = [
@@ -23,7 +23,7 @@ const NavItem = ({ path, name }: { path: string; name: string }) => {
   return <Component to={path}>{name}</Component>
 }
 
-const Header = () => {
+export const Header = () => {
   return (
     <div>
       <Navbar collapseOnSelect expand="lg">
@@ -44,8 +44,6 @@ const Header = () => {
     </div>
   )
 }
-
-export default Header
 
 const NavLink = styled(Link)`
   font-size: 18px;

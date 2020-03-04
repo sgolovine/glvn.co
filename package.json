@@ -14,7 +14,7 @@
     "clean": "gatsby clean",
     "typecheck": "tsc",
     "dead-code": "ts-prune",
-    "ci": "yarn format && yarn typecheck && yarn dead-code"
+    "ci": "yarn format && yarn typecheck"
   },
   "dependencies": {
     "@types/react-helmet": "^5.0.15",

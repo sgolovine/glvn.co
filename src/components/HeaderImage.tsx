@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-export default () => {
+export const HeaderImage = () => {
   const data = useStaticQuery(graphql`
     query {
       icon: file(relativePath: { eq: "profile.png" }) {
