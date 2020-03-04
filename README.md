@@ -7,6 +7,12 @@
   My Personal Website
 </h1>
 
+## Statuses
+
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fsgolovine%2Fglvn.co%2Fbadge%3Fref%3Dmaster&style=flat-square)](https://actions-badge.atrox.dev/sgolovine/glvn.co/goto?ref=master)
+
+
+
 ## Installation
 
 Make sure you have NodeJS and yarn installed via NPM. Run `yarn` in the project directory to install dependencies
