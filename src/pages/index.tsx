@@ -3,20 +3,36 @@ import Text from '../components/Text'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
+const pageLinks = {
+  hometown: 'https://en.wikipedia.org/wiki/Yekaterinburg',
+  atlanta: 'https://en.wikipedia.org/wiki/Atlanta',
+  react: 'https://reactjs.org/',
+  reactNative: 'https://reactnative.dev/',
+  gatsby: 'https://www.gatsbyjs.org/',
+  more: 'https://github.com/sgolovine',
+}
+
 export default () => {
   return (
     <PageContainer>
       <StyledText>
         I'm a Full Stack developer from{' '}
-        <StyledExternalLink href="#">Yekaterinburg, Russia</StyledExternalLink>{' '}
+        <StyledExternalLink href={pageLinks.hometown}>
+          Yekaterinburg, Russia
+        </StyledExternalLink>{' '}
         currently living in{' '}
-        <StyledExternalLink href="#">Atlanta, Georgia</StyledExternalLink>. I
-        love creating awesome web and mobile applications that help improve
+        <StyledExternalLink href={pageLinks.atlanta}>
+          Atlanta, Georgia
+        </StyledExternalLink>
+        . I love creating awesome web and mobile applications that help improve
         people's lives using technologies like{' '}
-        <StyledExternalLink href="#">React</StyledExternalLink>,{' '}
-        <StyledExternalLink href="#">React Native</StyledExternalLink>,{' '}
-        <StyledExternalLink href="#">Gatsby</StyledExternalLink> and{' '}
-        <StyledExternalLink href="#">more</StyledExternalLink>.
+        <StyledExternalLink href={pageLinks.react}>React</StyledExternalLink>,{' '}
+        <StyledExternalLink href={pageLinks.reactNative}>
+          React Native
+        </StyledExternalLink>
+        ,{' '}
+        <StyledExternalLink href={pageLinks.gatsby}>Gatsby</StyledExternalLink>{' '}
+        and <StyledExternalLink href={pageLinks.more}>more</StyledExternalLink>.
       </StyledText>
       <StyledText>
         When I'm not writing code I'm a world traveler, gearhead, watch nerd and

@@ -3,12 +3,15 @@ module.exports = {
     title: `glvn.co`,
     description: `My personal website`,
     author: `Sunny Golovine`,
+    siteUrl: 'https://glvn.co',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
