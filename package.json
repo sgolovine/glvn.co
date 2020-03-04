@@ -13,7 +13,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc",
-    "ci": "yarn format && yarn typecheck"
+    "dead-code": "ts-prune",
+    "ci": "yarn format && yarn typecheck && yarn dead-code"
   },
   "dependencies": {
     "@types/react-helmet": "^5.0.15",
@@ -45,6 +46,7 @@
     "@types/react-redux": "^7.1.7",
     "@types/styled-components": "^4.4.2",
     "prettier": "^1.19.1",
+    "ts-prune": "^0.3.0",
     "typescript": "^3.7.5"
   }
 }
