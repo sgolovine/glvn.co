@@ -7,14 +7,12 @@ import ProjectPage from './pages/projects'
 import ContactPage from './pages/contact'
 
 import { SiteLayout } from './components/SiteLayout'
-import { MetaHelmet } from './components/MetaHelmet'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Bootstrap = () => {
   return (
     <>
-      <MetaHelmet />
       <BrowserRouter>
         <SiteLayout>
           <Switch>
