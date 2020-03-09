@@ -13,8 +13,7 @@
     "clean": "rm -rf ./cache ./dist",
     "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
     "typecheck": "tsc",
-    "prune": "ts-prune",
-    "ci": "yarn format && yarn typecheck && yarn prune"
+    "ci": "yarn format && yarn typecheck"
   },
   "dependencies": {
     "@types/react-dom": "^16.9.5",
@@ -36,7 +35,6 @@
     "parcel-bundler": "^1.12.4",
     "prettier": "^1.19.1",
     "serve": "^11.3.0",
-    "ts-prune": "^0.3.0",
     "typescript": "^3.7.5"
   }
 }
