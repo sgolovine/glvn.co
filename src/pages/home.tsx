@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text } from '../components/Text'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
+import { Link } from 'react-router-dom'
 
 const pageLinks = {
   hometown: 'https://en.wikipedia.org/wiki/Yekaterinburg',

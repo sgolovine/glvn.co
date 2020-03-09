@@ -1,9 +1,8 @@
 import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
-import { Link } from 'gatsby'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { HeaderImage } from './HeaderImage'
-import { ThemeSelector } from './ThemeSelector'
 
 const links = [
   {
@@ -15,13 +14,6 @@ const links = [
     path: '/contact',
   },
 ]
-
-const NavItem = ({ path, name }: { path: string; name: string }) => {
-  const active = window.location.pathname === path
-  const Component = active ? ActiveNavLink : NavLink
-
-  return <Component to={path}>{name}</Component>
-}
 
 export const Header = () => {
   return (
@@ -35,10 +27,13 @@ export const Header = () => {
         >
           <Nav>
             {links.map((link, index) => {
-              return <NavItem key={index} path={link.path} name={link.name} />
+              return (
+                <NavLink key={index} to={link.path}>
+                  {link.name}
+                </NavLink>
+              )
             })}
           </Nav>
-          <ThemeSelector />
         </Navbar.Collapse>
       </Navbar>
     </div>
@@ -56,19 +51,4 @@ const NavLink = styled(Link)`
   width: 120px;
   text-align: center;
   text-transform: uppercase;
-  color: ${(props) => props.theme.text};
-  :hover {
-    text-decoration: none;
-    border-bottom-color: ${(props) => props.theme.text};
-    color: ${(props) => props.theme.text};
-  }
-  @media (max-width: 1000px) {
-    border: unset;
-    border-radius: unset;
-    text-align: unset;
-  }
-`
-
-const ActiveNavLink = styled(NavLink)`
-  border-bottom-color: ${(props) => props.theme.text};
 `

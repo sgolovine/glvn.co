@@ -13,8 +13,8 @@ export const ProjectCard = (props: Props) => {
   return (
     <MarginCard>
       <Card.Body>
-        <CardTitle>{props.name}</CardTitle>
-        <CardText>{props.desc}</CardText>
+        <Card.Title>{props.name}</Card.Title>
+        <Card.Text>{props.desc}</Card.Text>
         {props.githubUrl && (
           <Card.Link href={props.githubUrl}>Source Code</Card.Link>
         )}
@@ -27,14 +27,4 @@ export const ProjectCard = (props: Props) => {
 const MarginCard = styled(Card)`
   margin-top: 5px;
   margin-bottom: 5px;
-  background-color: ${(props) => props.theme.background};
-  border-color: ${(props) => props.theme.borderColor};
-`
-
-const CardTitle = styled(Card.Title)`
-  color: ${(props) => props.theme.text};
-`
-
-const CardText = styled(Card.Text)`
-  color: ${(props) => props.theme.text};
 `
