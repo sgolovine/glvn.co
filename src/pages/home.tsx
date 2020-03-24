@@ -1,16 +1,7 @@
 import React from 'react'
-import { Text } from '../components/Text'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-
-const pageLinks = {
-  hometown: 'https://en.wikipedia.org/wiki/Yekaterinburg',
-  atlanta: 'https://en.wikipedia.org/wiki/Atlanta',
-  react: 'https://reactjs.org/',
-  reactNative: 'https://reactnative.dev/',
-  gatsby: 'https://www.gatsbyjs.org/',
-  more: 'https://github.com/sgolovine',
-}
+import { pageLinks } from '../data/homePageLinks'
 
 export default () => {
   return (
@@ -60,6 +51,6 @@ const PageContainer = styled.div`
   max-width: 1200px;
 `
 
-const StyledText = styled(Text)`
+const StyledText = styled.p`
   font-size: 28px;
 `

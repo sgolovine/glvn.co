@@ -36,10 +36,3 @@ export const links: Link[] = [
     type: 'normal',
   },
 ]
-
-// email: 'sunny@glvn.co',
-// github: 'https://github.com/sgolovine',
-// linkedin: 'https://linkedin.com/in/SunnyGolovine',
-// instagram: 'https://instagram.com/sunny.tsx',
-// medium: 'https://medium.com/@SunnyGolovine',
-// devTo: 'https://dev.to/sgolovine',
