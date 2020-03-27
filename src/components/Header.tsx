@@ -1,20 +1,11 @@
 import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, useRouteMatch } from 'react-router-dom'
 import styled from 'styled-components'
-
-const links = [
-  {
-    name: 'Projects',
-    path: '/projects',
-  },
-  {
-    name: 'Contact',
-    path: '/contact',
-  },
-]
+import { links } from '../data/header'
 
 export const Header = () => {
+  const match = useRouteMatch()
   return (
     <div>
       <Navbar bg="dark" variant="dark" expand="lg">
@@ -27,7 +18,7 @@ export const Header = () => {
           <Nav>
             {links.map((link, index) => {
               return (
-                <NavLink key={index} to={link.path}>
+                <NavLink key={index} to={`${match.path}/${link.path}`}>
                   {link.name}
                 </NavLink>
               )
