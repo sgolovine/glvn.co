@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { links } from '../data/links'
 import { Link } from 'react-router-dom'
 
+const profile = require('../images/profile.png')
+
 type ColTextProps = {
   href?: string
   left: string
@@ -70,14 +72,17 @@ export default () => {
   return (
     <OuterContainer>
       <PageContainer>
-        <Headline>
-          Hi my name is&nbsp;
-          <HeadlineName>Sunny Golovine.&nbsp;</HeadlineName>I am a software
-          engineer specializing in Javascript, React and React Native. I
-          currently work for Cox Automotive as a mobile developer. In my spare
-          time I like to go hiking and work on a few of my{' '}
-          <HeadlineLink to="/pages/about">side projects</HeadlineLink>
-        </Headline>
+        <HeadlineContainer>
+          <Image src={profile} height="128" />
+          <Headline>
+            Hi my name is&nbsp;
+            <HeadlineName>Sunny Golovine.&nbsp;</HeadlineName>I am a software
+            engineer specializing in Javascript, React and React Native. I
+            currently work for Cox Automotive as a mobile developer. In my spare
+            time I like to go hiking and work on a few of my{' '}
+            <HeadlineLink to="/pages/about">side projects</HeadlineLink>
+          </Headline>
+        </HeadlineContainer>
         <PageGrid />
         <FooterContainer>
           <FooterLink to="/pages/about">About&nbsp;&nbsp;</FooterLink>
@@ -93,6 +98,11 @@ const headlineFontSize = '22'
 const columnTextSize = '14'
 const columnTextFontFamily = 'Roboto Condensed'
 const otherTextFontFamily = "'Roboto Slab'; sans-serif"
+
+const HeadlineContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`
 
 const HeadlineName = styled.span`
   font-size: ${headlineFontSize}px;
@@ -190,4 +200,8 @@ const FooterContainer = styled.div``
 const FooterLink = styled(Link)`
   font-family: ${otherTextFontFamily};
   font-size: 18px;
+`
+
+const Image = styled.img`
+  margin: 1em;
 `
