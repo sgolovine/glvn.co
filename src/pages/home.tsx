@@ -102,6 +102,13 @@ const otherTextFontFamily = "'Roboto Slab'; sans-serif"
 const HeadlineContainer = styled.div`
   display: flex;
   flex-direction: row;
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 `
 
 const HeadlineName = styled.span`
@@ -125,10 +132,6 @@ const OuterContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   padding-top: 2.5rem;
-  @media (max-width: 800px) {
-    padding-left: 2em;
-    padding-right: 2em;
-  }
 `
 
 const PageContainer = styled.div`
