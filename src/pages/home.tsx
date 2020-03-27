@@ -80,7 +80,7 @@ export default () => {
             engineer specializing in Javascript, React and React Native. I
             currently work for Cox Automotive as a mobile developer. In my spare
             time I like to go hiking and work on a few of my{' '}
-            <HeadlineLink to="/pages/about">side projects</HeadlineLink>
+            <HeadlineLink to="/pages/projects">side projects</HeadlineLink>
           </Headline>
         </HeadlineContainer>
         <PageGrid />
