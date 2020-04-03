@@ -7,6 +7,8 @@ import AboutPage from './pages/about'
 import ProjectPage from './pages/projects'
 import ContactPage from './pages/contact'
 
+import CopyBinPage from './pages/projects/copyBin'
+
 import { SiteLayout } from './components/SiteLayout'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -29,6 +31,19 @@ const MainRoutes = () => {
     </SiteLayout>
   )
 }
+
+const ProjectRoutes = () => {
+  const match = useRouteMatch()
+  return (
+    <SiteLayout>
+      <Switch>
+        <Route exact path={`${match.url}/copy-bin`}>
+          <CopyBinPage />
+        </Route>
+      </Switch>
+    </SiteLayout>
+  )
+}
 const Bootstrap = () => {
   return (
     <>
@@ -38,6 +53,9 @@ const Bootstrap = () => {
         </Route>
         <Route path="/pages">
           <MainRoutes />
+        </Route>
+        <Route path="/projects">
+          <ProjectRoutes />
         </Route>
       </BrowserRouter>
     </>
