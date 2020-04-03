@@ -16,4 +16,8 @@ export const links: HeaderLink[] = [
     name: 'Contact Me',
     path: 'contact',
   },
+  {
+    name: 'Resume',
+    path: 'contact',
+  },
 ]

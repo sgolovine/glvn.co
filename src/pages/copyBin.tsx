@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const headerImage = require('../../images/copy-bin.png')
+const headerImage = require('../images/copy-bin.png')
 
 export default () => {
   return (

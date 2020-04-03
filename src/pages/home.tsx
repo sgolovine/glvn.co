@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { links } from '../data/links'
+import { links as internalLinks } from '../data/header'
 import { Link } from 'react-router-dom'
 
 const profile = require('../images/profile.png')
@@ -80,14 +81,18 @@ export default () => {
             engineer specializing in Javascript, React and React Native. I
             currently work for Cox Automotive as a mobile developer. In my spare
             time I like to go hiking and work on a few of my{' '}
-            <HeadlineLink to="/pages/projects">side projects</HeadlineLink>
+            <HeadlineLink to="/projects">side projects</HeadlineLink>
           </Headline>
         </HeadlineContainer>
         <PageGrid />
         <FooterContainer>
-          <FooterLink to="/pages/about">About&nbsp;&nbsp;</FooterLink>
-          <FooterLink to="/pages/about">Projects&nbsp;&nbsp;</FooterLink>
-          <FooterLink to="/pages/about">Contact</FooterLink>
+          {internalLinks.map((link) => {
+            return (
+              <FooterLink to={`/${link.path}`}>
+                {link.name}&nbsp;&nbsp;&nbsp;
+              </FooterLink>
+            )
+          })}
         </FooterContainer>
       </PageContainer>
     </OuterContainer>
@@ -203,6 +208,10 @@ const FooterContainer = styled.div``
 const FooterLink = styled(Link)`
   font-family: ${otherTextFontFamily};
   font-size: 18px;
+  text-decoration: none;
+  :hover {
+    text-decoration: none;
+  }
 `
 
 const Image = styled.img`

@@ -18,7 +18,7 @@ export const Header = () => {
           <Nav>
             {links.map((link, index) => {
               return (
-                <NavLink key={index} to={`${match.path}/${link.path}`}>
+                <NavLink key={index} to={`/${link.path}`}>
                   {link.name}
                 </NavLink>
               )

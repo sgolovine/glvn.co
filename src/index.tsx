@@ -1,65 +1,60 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter, Switch, Route, useRouteMatch } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
 import HomePage from './pages/home'
 import AboutPage from './pages/about'
 import ProjectPage from './pages/projects'
 import ContactPage from './pages/contact'
-
-import CopyBinPage from './pages/projects/copyBin'
+import CopyBinPage from './pages/copyBin'
+import ResumePage from './pages/resume'
 
 import { SiteLayout } from './components/SiteLayout'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-const MainRoutes = () => {
-  const match = useRouteMatch()
+type SiteRouteProps = {
+  path: string
+  children: any
+}
+
+const SiteRoute = (props: SiteRouteProps) => {
   return (
-    <SiteLayout>
-      <Switch>
-        <Route exact path={`${match.url}/about`}>
-          <AboutPage />
-        </Route>
-        <Route exact path={`${match.url}/projects`}>
-          <ProjectPage />
-        </Route>
-        <Route exact path={`${match.url}/contact`}>
-          <ContactPage />
-        </Route>
-      </Switch>
-    </SiteLayout>
+    <Route exact path={props.path}>
+      <SiteLayout>{props.children}</SiteLayout>
+    </Route>
   )
 }
 
-const ProjectRoutes = () => {
-  const match = useRouteMatch()
-  return (
-    <SiteLayout>
-      <Switch>
-        <Route exact path={`${match.url}/copy-bin`}>
-          <CopyBinPage />
-        </Route>
-      </Switch>
-    </SiteLayout>
-  )
-}
-const Bootstrap = () => {
-  return (
-    <>
-      <BrowserRouter>
-        <Route exact path="/">
-          <HomePage />
-        </Route>
-        <Route path="/pages">
-          <MainRoutes />
-        </Route>
-        <Route path="/projects">
-          <ProjectRoutes />
-        </Route>
-      </BrowserRouter>
-    </>
-  )
-}
+const Site = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/">
+        <HomePage />
+      </Route>
+      <SiteRoute path="/about">
+        <AboutPage />
+      </SiteRoute>
+      <SiteRoute path="/projects">
+        <ProjectPage />
+      </SiteRoute>
+      <SiteRoute path="/projects/copy-bin">
+        <CopyBinPage />
+      </SiteRoute>
+      <SiteRoute path="/projects/copybin">
+        <Redirect to="/project/copy-bin" />
+      </SiteRoute>
+      <SiteRoute path="/copybin">
+        <Redirect to="/projects-copybin" />
+      </SiteRoute>
+      <SiteRoute path="/contact">
+        <ContactPage />
+      </SiteRoute>
+      <SiteRoute path="/resume">
+        <ResumePage />
+      </SiteRoute>
+    </Switch>
+  </BrowserRouter>
+)
 
-ReactDOM.render(<Bootstrap />, document.getElementById('root'))
+ReactDOM.render(<Site />, document.getElementById('root'))
