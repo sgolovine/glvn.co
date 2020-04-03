@@ -12,6 +12,11 @@ export const projects = [
     webUrl: 'https://fav.sh',
   },
   {
+    name: 'CopyBin',
+    desc: 'Quickly Copy and Paste Canned Responses',
+    webUrl: 'https://glvn.co/projects/copy-bin',
+  },
+  {
     name: 'dotfiles',
     desc: 'My Dotfiles',
     gitUrl: 'https://github.com/sgolovine/dotfiles',
