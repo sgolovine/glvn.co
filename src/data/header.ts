@@ -18,6 +18,6 @@ export const links: HeaderLink[] = [
   },
   {
     name: 'Resume',
-    path: 'contact',
+    path: 'resume',
   },
 ]

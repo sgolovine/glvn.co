@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { links } from '../data/links'
 import { links as internalLinks } from '../data/header'
 import { Link } from 'react-router-dom'
+import { BottomNav } from '../components/BottomNav'
 
 const profile = require('../images/profile.png')
 
@@ -85,7 +86,8 @@ export default () => {
           </Headline>
         </HeadlineContainer>
         <PageGrid />
-        <FooterContainer>
+        <BottomNav />
+        {/* <FooterContainer>
           {internalLinks.map((link) => {
             return (
               <FooterLink to={`/${link.path}`}>
@@ -93,7 +95,7 @@ export default () => {
               </FooterLink>
             )
           })}
-        </FooterContainer>
+        </FooterContainer> */}
       </PageContainer>
     </OuterContainer>
   )
