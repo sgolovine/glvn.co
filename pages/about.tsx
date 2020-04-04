@@ -1,5 +1,5 @@
 import React from "react";
-import { Linker } from "../components/Linker";
+import { Linker } from "~/components/Linker";
 
 export default () => (
   <div className="page">

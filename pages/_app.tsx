@@ -1,7 +1,7 @@
 import React from "react";
 
-import "../styles/linker.css";
-import "../styles/root.css";
+import "~/styles/linker.css";
+import "~/styles/root.css";
 
 export default function App({
   Component,

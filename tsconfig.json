@@ -7,9 +7,9 @@
     "lib": ["esnext", "dom"],
     "noEmit": true,
     "strict": true,
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "*": ["./*"],
+      "*": ["."],
       "~/*": ["./*"]
     },
     "allowSyntheticDefaultImports": true,
@@ -23,6 +23,6 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true
   },
-  "include": ["./pages/*.tsx", "./components/*.tsx"],
+  "include": ["./**/*.tsx"],
   "exclude": ["node_modules"]
 }
