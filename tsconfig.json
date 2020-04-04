@@ -19,6 +19,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true
   },
-  "include": ["./src/**/*", "Typography.tsx"],
+  "include": ["./pages/*.tsx"],
   "exclude": ["node_modules"]
 }

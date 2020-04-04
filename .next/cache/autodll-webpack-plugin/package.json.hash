@@ -1,0 +1,1 @@
+{"name":"glvn.co","license":"ISC","author":{"name":"Sunny Golovine"},"version":"1.0.0","description":"My Website","main":"index.js","scripts":{"start":"next","build":"next build","serve":"next start"},"dependencies":{"next":"^9.3.4","react":"^16.13.1","react-dom":"^16.13.1"},"readme":"ERROR: No README data found!","_id":"glvn.co@1.0.0"}
