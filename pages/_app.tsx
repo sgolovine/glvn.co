@@ -1,7 +1,12 @@
 import React from 'react'
+import MainLayout from '~/layouts/MainLayout'
+
+import '~/styles/_reset.css'
+import '~/styles/root.css'
+import '~/styles/layout.css'
 
 import '~/styles/linker.css'
-import '~/styles/root.css'
+import '~/styles/navbar.css'
 
 export default function App({
   Component,
@@ -10,5 +15,9 @@ export default function App({
   Component: any
   pageProps: any
 }) {
-  return <Component {...pageProps} />
+  return (
+    <MainLayout>
+      <Component {...pageProps} />
+    </MainLayout>
+  )
 }
