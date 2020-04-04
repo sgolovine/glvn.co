@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 export const Linker = () => {
   return (
@@ -19,5 +19,5 @@ export const Linker = () => {
         <a>Contact</a>
       </Link>
     </div>
-  );
-};
+  )
+}
