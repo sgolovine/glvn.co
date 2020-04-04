@@ -50,9 +50,9 @@ const Site = () => (
       <SiteRoute path="/contact">
         <ContactPage />
       </SiteRoute>
-      <Route path="/resume">
+      <SiteRoute path="/resume">
         <ResumePage />
-      </Route>
+      </SiteRoute>
     </Switch>
   </BrowserRouter>
 )
