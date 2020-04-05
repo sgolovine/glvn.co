@@ -12,8 +12,9 @@
     "format": "prettier --write ./**/*.{ts,tsx}",
     "lint:js": "eslint ./**/*.{ts,tsx}",
     "lint:css": "stylelint 'styles/**/*.{css,scss,sass}'",
+    "lint": "yarn lint:js && yarn lint:css",
     "typecheck": "tsc",
-    "ci": "yarn typecheck && yarn format && yarn lint:css"
+    "ci": "yarn typecheck && yarn lint && yarn format"
   },
   "dependencies": {
     "classnames": "^2.2.6",
