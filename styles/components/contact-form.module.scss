@@ -1,0 +1,46 @@
+@import '../variables';
+@import './button.module';
+@import '../util';
+
+@mixin form-input-base {
+  border: 2px solid $site-primary;
+  border-radius: 2.5px;
+  box-shadow: 0 0 0 0 $grey-light;
+  font-family: $site-font;
+  font-size: 18px;
+  padding: 0.5em;
+}
+
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  width: 1100px;
+  @include mobile {
+    width: 75%;
+  }
+}
+
+.contact-form-label {
+  font-family: $site-font;
+  margin-top: 1.5em;
+}
+
+.contact-form-input {
+  @include form-input-base;
+}
+
+.contact-form-textarea {
+  @include form-input-base;
+}
+
+.contact-form-button-container {
+  @include mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.contact-form-action-button {
+  @include button;
+}
