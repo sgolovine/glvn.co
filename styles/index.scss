@@ -1,13 +1,13 @@
-@import "reset.scss";
-@import "typography.scss";
-@import "root.scss";
-@import "layout.scss";
+@import 'reset';
+@import 'typography';
+@import 'root';
+@import 'layout';
 
 // Component Level CSS
-@import "components/project-card.module.scss";
-@import "components/button.module.scss";
-@import "components/navbar.module.scss";
+@import 'components/project-card.module';
+@import 'components/button.module';
+@import 'components/navbar.module';
 
 // Module Level CSS
-@import "pages/index.module.scss";
-@import "pages/resume.module.scss";
+@import 'pages/index.module';
+@import 'pages/resume.module';

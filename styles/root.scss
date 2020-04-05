@@ -1,25 +1,34 @@
-@import "variables";
+@import 'variables';
 
-h1, h2, h3, h4, h5, h6, p {
+html,
+body {
+  background-color: $offwhite;
+  height: 100%;
+  margin: 0;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   color: $site-text;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  background-color: $offwhite;
-}
 
 a {
+  color: $site-link;
   text-decoration: none;
-  color: $site-link
 }
 
 a:hover {
+  color: $site-link-hover;
   text-decoration: none;
-  color: $site-link-hover
 }
 
 a:visited {
-  color: $site-link
+  color: $site-link;
 }
