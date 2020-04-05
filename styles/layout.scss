@@ -8,9 +8,15 @@
 
 .main-layout-content-container {
   flex-grow: 1;
-  max-width: 1200px;
-  min-width: 100%;
   padding: 1.5em;
+}
+
+.main-layout-content-container-fixed-width {
+  max-width: 1200px;
+}
+
+.main-layout-content-container-centered {
+  width: 100%;
 }
 
 .layout-centered {
