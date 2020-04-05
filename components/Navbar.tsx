@@ -1,13 +1,25 @@
 import React from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import classNames from 'classnames'
 
-const LinkItem = ({ name, path }: { name: string; path: string }) => (
-  <div className="navbar-navitem">
-    <Link href={path}>
-      <a className="navbar-navitem-text">{name}</a>
-    </Link>
-  </div>
-)
+const LinkItem = ({ name, path }: { name: string; path: string }) => {
+  const { pathname } = useRouter()
+  const re = new RegExp(path)
+  const active = re.test(pathname)
+
+  const styles = classNames('navbar-navitem-text', {
+    'navbar-navitem-text-active': active,
+  })
+
+  return (
+    <div className="navbar-navitem">
+      <Link href={path}>
+        <a className={styles}>{name}</a>
+      </Link>
+    </div>
+  )
+}
 
 export const Navbar = () => {
   return (
