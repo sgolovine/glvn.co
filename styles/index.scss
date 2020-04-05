@@ -1,6 +1,13 @@
 @import "reset.scss";
+@import "typography.scss";
 @import "root.scss";
 @import "layout.scss";
 @import "navbar.scss";
 
-@import "components/project-card.module.scss"
+
+// Component Level CSS
+@import "components/project-card.module.scss";
+
+
+// Module Level CSS
+@import "pages/about.module.scss"

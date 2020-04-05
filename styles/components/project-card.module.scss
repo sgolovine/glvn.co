@@ -7,13 +7,10 @@ $box-shadow-bottom: 1.5px;
 
 .project-card-container {
   margin: 1.5em;
-  width: 500px;
-  height: 150px;
+  margin-bottom: 2.5em;
+  max-width: 600px;
 }
 
-.project-card-upper-container {
-  height: 75%;
-}
 
 .project-card-header-container {
   display: flex;
@@ -29,7 +26,7 @@ $box-shadow-bottom: 1.5px;
 }
 .project-card-desc-text {
   font-size: 16px;
-  margin-top: 10px;
+  margin-top: 2.5px;
 }
 
 .project-card-link-item-container {
@@ -40,4 +37,27 @@ $box-shadow-bottom: 1.5px;
 
 .project-card-link-item-text {
   text-decoration: none;
+}
+
+.project-footer {
+  margin-left: 1.5em;
+  padding-top: 2.5em;
+  a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .project-card-header-container {
+    flex-direction: column;
+  }
+  .project-card-link-container {
+    margin-left: 0;
+    margin-right: 5px;
+  }
+  .project-card-link-item-container {
+    padding-left: 0px;
+    padding-right: 5px;
+
+  }
 }

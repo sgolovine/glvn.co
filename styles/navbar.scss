@@ -21,12 +21,12 @@
   text-decoration: none;
   font-size: 1.4em;
   font-weight: bold;
-  color: $site-header-link
+  color: $site-header-link !important;
 }
 
 .navbar-navitem-text:hover {
   text-decoration: none;
-  color: $site-header-link-hover
+  color: $site-header-link-hover !important;
 }
 
 
@@ -37,11 +37,11 @@
 .navbar-brand {
   font-size: 1.6em;
   text-decoration: none;
-  color: $site-header-link
+  color: $site-header-link !important;
 }
 
 .navbar-brand:hover {
-  color: $site-header-link-hover
+  color: $site-header-link-hover !important;
 }
 
 @media (max-width: 1200px) {

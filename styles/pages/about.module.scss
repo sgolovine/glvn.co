@@ -1,0 +1,18 @@
+@import "../_colors.scss";
+
+.about-container {
+  padding: 2.5em;
+}
+
+.about-text {
+  font-size: 24px;
+  line-height: 45px;
+}
+
+.about-link:hover {
+  color: $blue-lighter;
+}
+
+.about-bottom {
+  margin-top: 2.5em;
+}

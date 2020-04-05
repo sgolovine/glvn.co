@@ -11,7 +11,7 @@ type Props = {
 
 export const ProjectCard = (props: Props) => (
   <div className="project-card-container">
-    <div className="project-card-upper-container">
+    <div>
       <div className="project-card-header-container">
         <p className="project-card-header-text">{props.name}</p>
         {props.links && props.links.length > 0 && (
