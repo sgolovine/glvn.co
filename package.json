@@ -14,7 +14,8 @@
     "lint:css": "stylelint 'styles/**/*.{css,scss,sass}'",
     "lint": "yarn lint:js && yarn lint:css",
     "typecheck": "tsc",
-    "ci": "yarn typecheck && yarn lint && yarn format"
+    "ci": "yarn typecheck && yarn lint && yarn format",
+    "cleanup": "rm -rf .next node_modules"
   },
   "dependencies": {
     "classnames": "^2.2.6",
