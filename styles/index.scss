@@ -2,12 +2,11 @@
 @import "typography.scss";
 @import "root.scss";
 @import "layout.scss";
-@import "navbar.scss";
-
 
 // Component Level CSS
 @import "components/project-card.module.scss";
 @import "components/button.module.scss";
+@import "components/navbar.module.scss";
 
 // Module Level CSS
 @import "pages/index.module.scss";
