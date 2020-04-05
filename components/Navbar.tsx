@@ -7,9 +7,11 @@ const LinkItem = ({ name, path }: { name: string; path: string }) => {
   const { pathname } = useRouter()
   const re = new RegExp(path)
   const active = re.test(pathname)
+  const isHomePage = pathname === '/'
 
   const styles = classNames('navbar-navitem-text', {
     'navbar-navitem-text-active': active,
+    'navbar-navitem-transparent': isHomePage,
   })
 
   return (
@@ -22,10 +24,25 @@ const LinkItem = ({ name, path }: { name: string; path: string }) => {
 }
 
 export const Navbar = () => {
+  const { pathname } = useRouter()
+
+  const isHomePage = pathname === '/'
+
+  const styles = classNames(
+    'navbar-container',
+    { 'navbar-container-light': !isHomePage },
+    { 'navbar-container-transparent': isHomePage }
+  )
+
+  const navbarBrandStyles = classNames('navbar-brand', {
+    'navbar-brand-transparent': isHomePage,
+  })
+
+  console.log('styles', styles)
   return (
-    <div className="navbar-container">
+    <div className={styles}>
       <Link href="/">
-        <a className="navbar-brand">Sunny Golovine</a>
+        <a className={navbarBrandStyles}>Sunny Golovine</a>
       </Link>
       <div className="navbar-links">
         <LinkItem name="About" path="/about" />

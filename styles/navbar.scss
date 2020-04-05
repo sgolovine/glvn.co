@@ -1,12 +1,5 @@
 @import "_colors.scss";
 
-@mixin navbar-base {
-  padding: 2em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
 
 @mixin navitem-text-base {
   text-decoration: none;
@@ -15,7 +8,14 @@
 }
 
 .navbar-container {
-  @include navbar-base;
+  padding: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-container-light {
   border-bottom: 1.5px solid $grey-light;
   background-color: $site-primary;
   /* Do not touch this, very picky */
@@ -23,7 +23,6 @@
 }
 
 .navbar-container-transparent {
-  @include navbar-base;
   background-color: transparent;
 }
 
@@ -49,6 +48,10 @@
 }
 
 
+.navbar-navitem-transparent {
+  color: $site-primary !important;
+}
+
 .navbar-links {
   display: flex
 }
@@ -57,6 +60,10 @@
   font-size: 1.6em;
   text-decoration: none;
   color: $site-header-link !important;
+}
+
+.navbar-brand-transparent {
+  color: $site-primary !important; 
 }
 
 .navbar-brand:hover {
