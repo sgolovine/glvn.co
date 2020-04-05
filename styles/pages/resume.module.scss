@@ -1,3 +1,11 @@
+@import '../util';
+
 .resume-button-container {
   padding-top: 1.5em;
+}
+
+.resume-download-btn {
+  @include mobile {
+    display: block;
+  }
 }

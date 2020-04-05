@@ -6,7 +6,8 @@ export default () => {
   return (
     <>
       <p className="about-text">
-        I&apos;m a Full Stack developer from{' '}
+        Hi! My name is Arseniy (though I go by Sunny). I&apos;m a Full Stack
+        developer from{' '}
         <a className="about-link" href={pageLinks.hometown}>
           Yekaterinburg, Russia
         </a>{' '}

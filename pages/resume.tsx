@@ -5,8 +5,16 @@ export default () => (
   <>
     <p>You can view my resume below or download it in DOC or PDF formats</p>
     <div className="resume-button-container">
-      <LinkButton href="#" label="Download Resume (DOC)" />
-      <LinkButton href="#" label="Download Resume (PDF)" />
+      <LinkButton
+        className="resume-download-btn"
+        href="#"
+        label="Download Resume (DOC)"
+      />
+      <LinkButton
+        className="resume-download-btn"
+        href="#"
+        label="Download Resume (PDF)"
+      />
     </div>
   </>
 )
