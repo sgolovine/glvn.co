@@ -1,12 +1,7 @@
 import React from 'react'
 import MainLayout from '~/layouts/MainLayout'
 
-import '~/styles/_reset.css'
-import '~/styles/root.scss'
-import '~/styles/layout.css'
-
-import '~/styles/linker.css'
-import '~/styles/navbar.scss'
+import '~/styles/index.scss'
 
 export default function App({
   Component,

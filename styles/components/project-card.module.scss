@@ -1,0 +1,43 @@
+@import "../_colors";
+
+$box-shadow-amt: .75px;
+
+$box-shadow-right: 1.5px;
+$box-shadow-bottom: 1.5px;
+
+.project-card-container {
+  margin: 1.5em;
+  width: 500px;
+  height: 150px;
+}
+
+.project-card-upper-container {
+  height: 75%;
+}
+
+.project-card-header-container {
+  display: flex;
+}
+
+.project-card-link-container {
+  margin-left: 5px;
+  display: flex;
+}
+
+.project-card-header-text {
+  font-size: 22px
+}
+.project-card-desc-text {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.project-card-link-item-container {
+  align-self: center;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.project-card-link-item-text {
+  text-decoration: none;
+}
