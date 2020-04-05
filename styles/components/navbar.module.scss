@@ -1,22 +1,15 @@
-@import "_colors.scss";
-
-
-@mixin navitem-text-base {
-  text-decoration: none;
-  font-size: 1.4em;
-  font-weight: bold;
-}
+@import '../variables';
 
 .navbar-container {
-  padding: 2em;
+  align-items: center;
+  background-color: $site-primary;
+  border-bottom: 1.5px solid $grey-light;
+  /* Do not touch this, very picky */
+  box-shadow: 3.5px 2px 5px 1.5px $grey-light;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  border-bottom: 1.5px solid $grey-light;
-  background-color: $site-primary;
-  /* Do not touch this, very picky */
-  box-shadow: 3.5px 2.0px 5px 1.5px $grey-light;
+  padding: 2em;
 }
 
 
@@ -26,13 +19,14 @@
 }
 
 .navbar-navitem-text {
-  text-decoration: none;
+  color: $site-header-link !important;
   font-size: 1.4em;
   font-weight: bold;
-  color: $site-header-link !important;
+  text-decoration: none;
+  
   &:hover {
+    color: $site-header-link-hover !important;
     text-decoration: none;
-  color: $site-header-link-hover !important;
   }
 }
 
@@ -41,13 +35,14 @@
 }
 
 .navbar-links {
-  display: flex
+  display: flex;
 }
 
 .navbar-brand {
+  color: $site-header-link !important;
   font-size: 1.6em;
   text-decoration: none;
-  color: $site-header-link !important;
+  
   &:hover {
     color: $site-header-link-hover !important;
   }
@@ -57,12 +52,13 @@
 @media (max-width: 1200px) {
   .navbar-container {
     flex-direction: column;
-    justify-content: flex-start;
     height: unset;
+    justify-content: flex-start;
   }
+
   .navbar-navitem {
-    margin-top: 1em;
     margin-bottom: 1em;
+    margin-top: 1em;
   }
 }
 

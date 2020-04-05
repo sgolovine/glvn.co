@@ -4,7 +4,7 @@ import pageLinks from '~/data/homePage'
 
 export default () => {
   return (
-    <div className="page about-container">
+    <>
       <p className="about-text">
         I'm a Full Stack developer from{' '}
         <a className="about-link" href={pageLinks.hometown}>
@@ -44,6 +44,6 @@ export default () => {
           <a className="about-link">get in touch</a>
         </Link>
       </p>
-    </div>
+    </>
   )
 }
