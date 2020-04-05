@@ -1,16 +1,14 @@
 import React from 'react'
 
-type ButtonProps = {
-  link?: boolean
-  href?: string
-  onClick?: () => void
+type LinkButtonProps = {
+  href: string
   label: string
 }
 
-export const Button = (props: ButtonProps) => {
+export const LinkButton = (props: LinkButtonProps) => {
   return (
-    <button onClick={props.onClick} className="button">
-      <p>{props.label}</p>
-    </button>
+    <a href={props.href} className="link-button">
+      {props.label}
+    </a>
   )
 }
