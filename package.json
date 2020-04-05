@@ -11,7 +11,8 @@
     "serve": "next start",
     "format": "prettier --write ./**/*.{ts,tsx,js}",
     "lint:css": "stylelint 'styles/**/*.{css,scss,sass}'",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "ci": "yarn typecheck && yarn format && yarn lint:css"
   },
   "dependencies": {
     "classnames": "^2.2.6",
