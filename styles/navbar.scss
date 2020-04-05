@@ -1,10 +1,15 @@
+@import "_colors.scss";
+
 .navbar-container {
   padding: 2em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1.5px solid silver;
+  border-bottom: 1.5px solid $grey-light;
+  background-color: $site-primary;
+  /* Do not touch this, very picky */
+  box-shadow: 3.5px 2.0px 5px 1.5px $grey-light;
 }
 
 .navbar-navitem {
@@ -16,12 +21,12 @@
   text-decoration: none;
   font-size: 1.4em;
   font-weight: bold;
-  color: #000;
+  color: $site-header-link
 }
 
 .navbar-navitem-text:hover {
   text-decoration: none;
-  color: #555
+  color: $site-header-link-hover
 }
 
 
@@ -31,12 +36,12 @@
 
 .navbar-brand {
   font-size: 1.6em;
-  color: #000;
   text-decoration: none;
+  color: $site-header-link
 }
 
 .navbar-brand:hover {
-  color:#555
+  color: $site-header-link-hover
 }
 
 @media (max-width: 1200px) {
