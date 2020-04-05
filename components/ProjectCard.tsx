@@ -18,7 +18,10 @@ export const ProjectCard = (props: Props) => (
           <div className="project-card-link-container">
             {props.links.map((item) => {
               return (
-                <div className="project-card-link-item-container">
+                <div
+                  key={item.name.replace(' ', '-')}
+                  className="project-card-link-item-container"
+                >
                   <a className="project-card-link-item-text" href={item.href}>
                     {item.name}
                   </a>
