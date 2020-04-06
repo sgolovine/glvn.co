@@ -8,8 +8,8 @@ export default ({ children }: { children: ReactNode }) => {
   const re = new RegExp('/contact')
   const isContactPage = re.test(pathname)
 
-  const styles = classNames({
-    'main-layout-content-container': !isContactPage,
+  const styles = classNames('main-layout-content-container', {
+    'main-layout-content-container-fixed-width': !isContactPage,
     'main-layout-content-container-centered': isContactPage,
   })
   return (
