@@ -1,3 +1,7 @@
 @mixin mobile {
   @media (max-width: 1200px) { @content; }
 }
+
+.hidden {
+  display: none;
+}

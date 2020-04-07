@@ -5,16 +5,21 @@ import classNames from 'classnames'
 
 export default ({ children }: { children: ReactNode }) => {
   const { pathname } = useRouter()
-  const re = new RegExp('/contact')
-  const isContactPage = re.test(pathname)
+  const isContactPage = pathname === '/contact'
+  const isHomePage = pathname === '/'
 
   const styles = classNames('main-layout-content-container', {
     'main-layout-content-container-fixed-width': !isContactPage,
     'main-layout-content-container-centered': isContactPage,
   })
+
+  const headerStyles = classNames('main-layout-header-container', {
+    hidden: isHomePage,
+  })
+
   return (
     <div className="main-layout-container">
-      <div className="main-layout-header-container">
+      <div className={headerStyles}>
         <Navbar />
       </div>
       <div className={styles}>{children}</div>
