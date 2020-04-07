@@ -1,20 +1,10 @@
 import React from 'react'
-import { LinkButton } from '~/components/Button'
 
 export default () => (
   <>
     <p>You can view my resume below or download it in DOC or PDF formats</p>
     <div className="resume-button-container">
-      <LinkButton
-        className="resume-download-btn"
-        href="#"
-        label="Download Resume (DOC)"
-      />
-      <LinkButton
-        className="resume-download-btn"
-        href="#"
-        label="Download Resume (PDF)"
-      />
+      <a href="#">Download PDF</a>
     </div>
   </>
 )

@@ -1,11 +1,20 @@
-@import '../util';
-
-.resume-button-container {
-  padding-top: 1.5em;
+@mixin resume-typography {
+  h1 {
+    font-size: 4.8rem;
+  }
+  
+  h2 {
+    font-size: 3.6rem;
+  }
+  
+  h3 {
+    font-size: 3.2rem;
+  }
+  
 }
 
-.resume-download-btn {
-  @include mobile {
-    display: block;
-  }
+
+.resume-container {
+  @include resume-typography;
+  margin: 2.5em;
 }

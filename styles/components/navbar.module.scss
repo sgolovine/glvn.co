@@ -3,10 +3,6 @@
 
 .navbar-container {
   align-items: center;
-  background-color: $site-primary;
-  border-bottom: 1.5px solid $grey-light;
-  /* Do not touch this, very picky */
-  box-shadow: 3.5px 2px 5px 1.5px $grey-light;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -50,7 +46,8 @@
 
 .navbar-brand {
   color: $site-header-link !important;
-  font-size: 1.6em;
+  font-size: 1.4em;
+  font-weight: bold;
   text-decoration: none;
   
   &:hover {
