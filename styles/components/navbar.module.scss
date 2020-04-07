@@ -1,6 +1,8 @@
 @import '../variables';
 @import '../util';
 
+
+
 .navbar-container {
   align-items: center;
   display: flex;
@@ -16,6 +18,7 @@
 
 
 .navbar-navitem {
+  animation: fade-in ease 10s;
   margin-left: 1em;
   margin-right: 1em;
   @include mobile {

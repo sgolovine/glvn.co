@@ -1,3 +1,5 @@
+@import 'anim';
+
 .main-layout-container {
   display: flex;
   flex-direction: column;
@@ -6,7 +8,12 @@
   width: 100%;
 }
 
+.main-layout-header-container {
+  @include fade-in-header;
+}
+
 .main-layout-content-container {
+  @include fade-in-content;
   flex-grow: 1;
   padding: 1.5em;
 }

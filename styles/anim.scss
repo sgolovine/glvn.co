@@ -1,0 +1,26 @@
+$fade-in-time: 500ms;
+
+
+@mixin fade-in-header {
+  animation: fadeInHeader ease-in $fade-in-time;
+}
+
+@mixin fade-in-content {
+  animation: fadeInContent ease-in $fade-in-time;
+}
+
+@keyframes fadeInHeader {
+  0% { opacity: 0; }
+
+  50% { opacity: 1;}
+
+  100% {opacity: 1;}
+}
+
+@keyframes fadeInContent {
+  0% { opacity: 0; }
+
+  50% { opacity: 0;}
+
+  100% {opacity: 1;}
+}
