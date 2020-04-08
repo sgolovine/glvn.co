@@ -6,10 +6,12 @@ import classNames from 'classnames'
 const LinkItem = ({
   name,
   path,
+  external,
   target,
 }: {
   name: string
   path: string
+  external?: boolean
   target?: string
 }) => {
   const { pathname } = useRouter()
@@ -22,11 +24,17 @@ const LinkItem = ({
 
   return (
     <div className="navbar-navitem">
-      <Link href={path}>
-        <a className={styles} target={target}>
+      {external ? (
+        <a href={path} className={styles} target={target}>
           {name}
         </a>
-      </Link>
+      ) : (
+        <Link href={path}>
+          <a className={styles} target={target}>
+            {name}
+          </a>
+        </Link>
+      )}
     </div>
   )
 }
@@ -40,7 +48,12 @@ export const Navbar = () => {
       <div className="navbar-links">
         <LinkItem name="Projects" path="/projects" />
         <LinkItem name="Contact" path="/contact" />
-        <LinkItem name="Resume" target="_blank" path="https://resume.glvn.co" />
+        <LinkItem
+          external
+          name="Resume"
+          target="_blank"
+          path="https://resume.glvn.co"
+        />
       </div>
     </div>
   )
