@@ -9,5 +9,6 @@
 @import 'components/navbar.module';
 @import 'components/contact-form.module';
 
-// Module Level CSS
-@import 'pages/about.module';
+// Page Level CSS
+@import 'pages/index.module';
+@import 'pages/contact.module';

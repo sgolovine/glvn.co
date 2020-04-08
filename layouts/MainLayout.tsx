@@ -8,9 +8,11 @@ export default ({ children }: { children: ReactNode }) => {
   const isContactPage = pathname === '/contact'
   const isHomePage = pathname === '/'
 
+  const centeredLayoutPages = isContactPage || isHomePage
+
   const styles = classNames('main-layout-content-container', {
-    'main-layout-content-container-fixed-width': !isContactPage,
-    'main-layout-content-container-centered': isContactPage,
+    'main-layout-content-container-fixed-width': !centeredLayoutPages,
+    'main-layout-content-container-centered': centeredLayoutPages,
   })
 
   const headerStyles = classNames('main-layout-header-container', {

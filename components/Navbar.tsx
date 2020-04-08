@@ -38,7 +38,6 @@ export const Navbar = () => {
         <a className="navbar-brand">Sunny Golovine</a>
       </Link>
       <div className="navbar-links">
-        <LinkItem name="About" path="/about" />
         <LinkItem name="Projects" path="/projects" />
         <LinkItem name="Contact" path="/contact" />
         <LinkItem name="Resume" target="_blank" path="https://resume.glvn.co" />

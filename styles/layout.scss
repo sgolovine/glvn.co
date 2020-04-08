@@ -15,7 +15,6 @@
 .main-layout-content-container {
   @include fade-in-content;
   flex-grow: 1;
-  padding: 1.5em;
 }
 
 .main-layout-content-container-fixed-width {
@@ -23,11 +22,14 @@
 }
 
 .main-layout-content-container-centered {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
 .layout-centered {
-  align-items: center;
+  align-self: center;
   display: flex;
   flex-direction: column;
+  max-width: 1200px;
 }
