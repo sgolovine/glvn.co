@@ -1,6 +1,6 @@
 import React from 'react'
-import { Navbar } from '~/components/Navbar'
 import classNames from 'classnames'
+import { Navbar } from '~/components/Navbar'
 import { LayoutProps } from '~/model/LayoutProps'
 
 export default (props: LayoutProps) => {
@@ -10,7 +10,7 @@ export default (props: LayoutProps) => {
 
   const contentStyles = classNames(
     'main-layout-content-container',
-    'main-layout-content-container-fixed-width'
+    'main-layout-content-container-centered'
   )
 
   return (
