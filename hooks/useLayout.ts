@@ -44,8 +44,8 @@ export function useLayout() {
     if (pathMatch.isContact) {
       setLayoutState({
         headerHidden: false,
-        contentCentered: false,
-        contentRegular: true,
+        contentCentered: true,
+        contentRegular: false,
       })
     }
   }, [pathMatch])
@@ -59,5 +59,5 @@ export function useLayout() {
     'main-layout-content-container-fixed-width': layoutState.contentRegular,
   })
 
-  return [headerClassNames, contentClassNames]
+  return { headerClassNames, contentClassNames }
 }

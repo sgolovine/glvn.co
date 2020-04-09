@@ -1,16 +1,21 @@
 import React from 'react'
-import MainLayout from '~/layouts/MainLayout'
 import { AppProps } from 'next/app'
-import { usePathMatcher } from '~/hooks/usePathMatcher'
+import { useLayout } from '~/hooks/useLayout'
 
 import '~/styles/index.scss'
+import { Navbar } from '~/components/Navbar'
 
 export default function App({ Component, pageProps }: AppProps) {
-  const pathMatch = usePathMatcher()
+  const layout = useLayout()
 
   return (
-    <MainLayout>
-      <Component {...pageProps} />
-    </MainLayout>
+    <div className="main-layout-container">
+      <div className={layout.headerClassNames}>
+        <Navbar />
+      </div>
+      <div className={layout.contentClassNames}>
+        <Component {...pageProps} />
+      </div>
+    </div>
   )
 }
