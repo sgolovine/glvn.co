@@ -1,10 +1,5 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-/**
- * This hook controls how everything will look
- * from page to page on the site
- *
- */
 
 type HookState = {
   isHome: boolean
@@ -20,10 +15,7 @@ const initialState: HookState = {
   isProjectPage: false,
 }
 
-const test = (pathName: string) => {
-  // Check if the user is on
-  // /projects or /projects/something/else/*
-
+const testPath = (pathName: string) => {
   type MappingItem = { path: keyof HookState; regex: RegExp }
 
   const mapping: MappingItem[] = [
@@ -66,7 +58,7 @@ export function usePathMatcher() {
   const router = useRouter()
 
   useEffect(() => {
-    setPathState(test(router.pathname))
+    setPathState(testPath(router.pathname))
   }, [router.pathname])
 
   return pathState
