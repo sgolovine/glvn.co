@@ -14,6 +14,14 @@ const projects = [
     ],
   },
   {
+    key: 'resumekit',
+    name: 'ResumeKit',
+    shortDesc: 'Markdown resume builder',
+    desc:
+      'Build your resume in Markdown, convert and deploy automatically with updates',
+    links: [{ name: 'Github', href: 'https://github.com/sgolovine/resumekit' }],
+  },
+  {
     key: 'fav',
     name: 'Fav Bookmark Manager',
     shortName: 'Fav',
