@@ -22,6 +22,11 @@
   }
 }
 
+.contact-form-submitted-container {
+  align-items: center;
+  margin-top: 1.5em;
+}
+
 .contact-form-label {
   font-family: $site-font;
   font-size: 14px;
@@ -49,3 +54,4 @@
 .contact-form-action-button {
   @include button;
 }
+

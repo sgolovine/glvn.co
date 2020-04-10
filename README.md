@@ -22,3 +22,8 @@ Instal Deps: `yarn`
 Run: `yarn start`
 
 More in `package.json`
+
+
+ ## Dev Links
+
+ [Working w/ Netlify TOML](https://docs.netlify.com/configure-builds/file-based-configuration/#sample-file)

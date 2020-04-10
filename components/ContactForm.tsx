@@ -5,12 +5,14 @@ type FormState = {
   name: string
   email: string
   message: string
+  submitted: boolean
 }
 
 const initialState: FormState = {
   name: '',
   email: '',
   message: '',
+  submitted: false,
 }
 
 export const ContactForm = () => {
@@ -34,13 +36,26 @@ export const ContactForm = () => {
       message: e.target.value,
     })
 
+  const setSubmitted = (submitted: boolean) => setForm({ ...form, submitted })
+
   const clearForm = () => {
-    console.log('clearing form')
     setForm(initialState)
   }
 
   const handleSubmit = () => {
-    alert('The form has been submitted!')
+    setSubmitted(true)
+  }
+
+  if (form.submitted) {
+    return (
+      <div className="contact-form-container contact-form-submitted-container">
+        <p>Thank you for your message</p>
+        <p>I will be in touch shortly</p>
+        <button onClick={clearForm} className="contact-form-action-button">
+          Go Back
+        </button>
+      </div>
+    )
   }
 
   return (
