@@ -1,0 +1,57 @@
+@import '../variables';
+@import '../util';
+
+.project-card-container {
+  margin: 1.5em;
+  margin-bottom: 2.5em;
+  max-width: 600px;
+}
+
+
+.project-card-header-container {
+  display: flex;
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.project-card-link-container {
+  display: flex;
+  margin-left: 5px;
+  @include mobile {
+    margin-left: 0;
+    margin-right: 5px;
+  }
+}
+
+.project-card-header-text {
+  font-size: 22px;
+}
+
+.project-card-desc-text {
+  font-size: 16px;
+  margin-top: 2.5px;
+}
+
+.project-card-link-item-container {
+  align-self: center;
+  margin-right: 5px;
+  padding: 5px;
+  @include mobile {
+    padding-left: 0;
+    padding-right: 5px;
+  }
+}
+
+.project-card-link-item-text {
+  text-decoration: none;
+}
+
+.project-footer {
+  margin-left: 1.5em;
+  padding-top: 2.5em;
+
+  a {
+    font-size: 20px;
+  }
+}

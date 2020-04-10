@@ -1,0 +1,6 @@
+/.next/*
+/.github/*
+/.vscode/*
+/node_modules/*
+/styles/*
+next-env.d.ts

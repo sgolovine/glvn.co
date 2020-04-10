@@ -1,0 +1,35 @@
+@import 'anim';
+
+.main-layout-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+.main-layout-header-container {
+  @include fade-in-header;
+}
+
+.main-layout-content-container {
+  @include fade-in-content;
+  flex-grow: 1;
+}
+
+.main-layout-content-container-fixed-width {
+  max-width: 1200px;
+}
+
+.main-layout-content-container-centered {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.layout-centered {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+}

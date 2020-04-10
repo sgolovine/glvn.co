@@ -1,0 +1,28 @@
+@import '../variables';
+
+@mixin button-base {
+  border: 1px solid;
+  border-radius: 7.5px;
+  font-family: $site-font;
+  font-size: 16px;
+  font-weight: bold;
+  height: 50px;
+  margin: 0.5em;
+  padding: 1em;
+  width: 200px;
+}
+
+@mixin button {
+  @include button-base;
+  background-color: $site-primary;
+  color: $offwhite;
+}
+
+
+
+.link-button {
+  @include button-base;
+  appearance: button;
+  text-decoration: none;
+}
+
