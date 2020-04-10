@@ -42,12 +42,8 @@ const projects = [
       'React Native app. Lets you quickly Copy and Paste Canned Responses. Avaliable on Google Play',
     links: [
       {
-        name: 'Website',
-        href: 'https://glvn.co/projects/copy-bin',
-      },
-      {
         name: 'Google Play',
-        href: 'https://glvn.co/projects/copy-bin',
+        href: 'https://play.google.com/store/apps/details?id=com.glvn.copybin',
       },
     ],
   },
