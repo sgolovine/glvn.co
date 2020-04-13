@@ -9,8 +9,15 @@ const projects = [
       'The worlds smartest tip tracker. Built with React Native, avaliable for iOS and Android',
     links: [
       { name: 'Website', href: 'https://tiptrack.app' },
-      { name: 'App Store', href: '#' },
-      { name: 'Google Play', href: '#' },
+      {
+        name: 'App Store',
+        href: 'https://apps.apple.com/us/app/tiptrack/id1495916444',
+      },
+      {
+        name: 'Google Play',
+        href:
+          'https://play.google.com/store/apps/details?id=com.glvn.tiptrack&hl=en_US',
+      },
     ],
   },
   {
@@ -18,7 +25,7 @@ const projects = [
     name: 'ResumeKit',
     shortDesc: 'Markdown resume builder',
     desc:
-      'Build your resume in Markdown, convert and deploy automatically with updates',
+      'Build your resume in Markdown, convert and deploy automatically with updates.',
     links: [{ name: 'Github', href: 'https://github.com/sgolovine/resumekit' }],
   },
   {
@@ -29,9 +36,16 @@ const projects = [
     desc:
       'Open source alternative bookmark manager for Firefox, Chrome and other Chromium browsers. Syncronizes with Github Gist API. Built with ReactJS and Material UI',
     links: [
-      { name: 'Website', href: 'https://tiptrack.app' },
-      { name: 'Firefox Addons', href: '#' },
-      { name: 'Chrome Web Store', href: '#' },
+      { name: 'Website', href: 'https://fav.sh' },
+      {
+        name: 'Firefox Addons',
+        href: 'https://addons.mozilla.org/en-US/firefox/addon/fav/',
+      },
+      {
+        name: 'Chrome Web Store',
+        href:
+          'https://chrome.google.com/webstore/detail/fav-bookmark-manager/gammmbkeceiljlgijimbhhgkfmiejnkl',
+      },
     ],
   },
   {
