@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¯\_(ツ)_/¯</title>
+    <style>
+      button {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        background: transparent;
+        align-items: center;
+      }
+      p {
+        width: 500px;
+        text-align: center;
+        align-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="copy()">
+      <p>
+        tap anywhere to copy this thing => ¯\_(ツ)_/¯
+      </p>
+      <p>
+        explanation: github.com/sgolovine/dno.glvn.co
+      </p>
+    </button>
+    <!-- <script src="index.js"></script> -->
+    <script>
+      function copy() {
+        const el = document.createElement("textarea");
+        el.value = "¯\\_(ツ)_/¯";
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand("copy");
+        document.body.removeChild(el);
+      }
+    </script>
+  </body>
+</html>
